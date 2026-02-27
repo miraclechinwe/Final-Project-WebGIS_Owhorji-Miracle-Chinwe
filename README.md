@@ -10,3 +10,24 @@ In order to preserve a polished process, I divided the project into three separa
 1. GeoTIFF pictures and configuration settings are contained in the data-raster.
 2. Punjab boundary shapefiles are stored in the data-vector.
 3. Web-frontend: Contains the source code for JavaScript, HTML, and CSS.
+
+**Phase 2: Configuring the GeoServer Backend**
+
+First, I login into Geoserver and created a workspace with url, as shown in the image below
+<img width="1380" height="680" alt="image" src="https://github.com/user-attachments/assets/5bef148d-5b75-405f-bbd8-7295f71021a9" />
+
+I created a dynamic time-series layer using the Image Mosaic plugin rather than importing images by hand.
+
+Automation Logic: In the raster folder, I produced two essential files:
+
+The regular expression timeregex.properties instructs GeoServer on how to locate the date in my filenames.
+
+indexer.properties: A schema instructing GeoServer to create a searchable "Time" index using those dates.
+
+Layer Setup: To enable the map to react to time-based queries, I made a new Image Mosaic Store in GeoServer and turned on the Time Dimension in the layer settings.
+
+Styling: I made the visualisation using GeoServer CSS:
+
+Raster: A ramp of green to red that contrasts high and low vegetation.
+
+Vector: The Punjab state boundary is clearly defined by a broad red edge.

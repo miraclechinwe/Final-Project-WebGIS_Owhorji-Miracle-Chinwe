@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDVI Punjab Time Series</title>
+    <link rel="stylesheet" href="ol.css">
+    <link rel="stylesheet" href="ol-layerswitcher.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; font-family: Arial, sans-serif; }
+        
+        .header-section { 
+            padding: 15px; 
+            background-color: #f8f9fa; 
+            border-bottom: 2px solid #34495e; 
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18pt;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        #map { flex-grow: 1; position: relative; }
+        
+        .info-panel { 
+            position: absolute; top: 20px; left: 50px; width: 260px; z-index: 1000; 
+            background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 13px; line-height: 1.4; 
+            border-left: 5px solid #27ae60; 
+            font-family: Arial, sans-serif;
+        }
+
+        .slidecontainer { padding: 20px; background: #fff; border-top: 1px solid #ddd; text-align: center; }
+        .controls { margin: 10px 0; }
+        button { padding: 8px 16px; cursor: pointer; background: #34495e; color: white; border: none; border-radius: 4px; font-weight: bold; }
+        button:hover { background: #2c3e50; }
+        .instruction-box { background: #e9ecef; padding: 10px; border-radius: 5px; margin-bottom: 10px; border-left: 4px solid #34495e; display: inline-block; width: 90%; }
+    </style>
+</head>
+<body>
+
+    <header class="header-section">
+        <div>Application Development Assignment</div>
+        <div>NDVI Vegetation Time Series</div>
+        <div>Punjab, India (2021-2022)</div>
+    </header>
+
+    <div id="map">
+        <div class="info-panel">
+            <h3 style="margin-top: 0; color: #27ae60; font-size: 16px;">Why NDVI Matters in Punjab</h3>
+            <p>Punjab is the <strong>"Granary of India,"</strong> producing massive quantities of wheat and rice.</p>
+            <p>This monitoring helps in:</p>
+            <ul style="padding-left: 20px; margin: 5px 0;">
+                <li><strong>Crop Health:</strong> Tracking growth stages.</li>
+                <li><strong>Food Security:</strong> Predicting yield.</li>
+            </ul>
+            <p style="margin-top: 12px; padding-top: 10px; border-top: 1px solid #ccc; color: #d35400; font-weight: bold;">
+                🖱️ Click any point on the map to query NDVI values.
+            </p>
+        </div>
+    </div>
+
+    <div class="slidecontainer">
+        <div class="instruction-box">
+            <p style="margin: 0; font-size: 14px; color: #333;">
+                <strong>Instruction:</strong> Use the slider or play button to watch vegetation changes. 
+                <span style="color: red; font-weight: bold;">Red outlines indicate state boundaries.</span>
+            </p>
+        </div>
+
+        <input type="range" min="0" value="0" class="slider" id="myRange" style="width: 80%;">
+        <div class="controls">
+            <button type="button" id="play">Play</button>
+            <button type="button" id="pause">Pause</button>
+            <button type="button" id="reset">Reset</button>
+        </div>
+        <p style="font-weight: bold;">Date: <span id="date_value"></span></p>
+    </div>
+
+    <script src="ol.js"></script>
+    <script src="ol-layerswitcher.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

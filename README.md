@@ -40,3 +40,21 @@ Also, i added a colour scheme,and save, as shown in the image below:
 Raster: A ramp of green to red that contrasts high and low vegetation.
 
 Vector: The Punjab state boundary is clearly defined by a broad red edge.
+
+**Phase 3: Web Stack Frontend Development**
+
+Using Visual Studio Code, I created the user interface with an emphasis on clear code and interactive elements.
+
+1. HTML5: Developed the layout, which included the map container and the sidebar that explains "Why NDVI Matters", as shown in the image below.
+<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/3d66c335-9e85-481b-ab74-98829d2d8ffa" />
+
+2. CSS: Created the custom legend, buttons, and responsive dashboard.
+<img width="1919" height="846" alt="image" src="https://github.com/user-attachments/assets/291b67fd-c44c-4341-b736-cb4181d5e603" />
+
+3. JavaScript-based OpenLayers: OSM and satellite base layers were used to initialise the map and the local endpoint was used to establish a connection to the GeoServer WMS.
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/9d59428c-85a1-4e88-9fba-ec93e0d9fd2b" />
+NOTE: I downloaded the 3rd party plugin of the Osm Layer to get the OL-Layerswitcher using the two link below:
+1. <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.2/dist/ol-layerswitcher.css" /> 
+2. <script src="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.2/dist/ol-layerswitcher.js"></script>
+
+I also Wrote the Time Logic: I wrote the slider and play/pause buttons to update the TIME parameter in the WMS request string, causing GeoServer to quickly flip between photos.

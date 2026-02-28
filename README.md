@@ -69,3 +69,14 @@ I also Wrote the Time Logic: I wrote the slider and play/pause buttons to update
 
 **In conclusion**
 An interactive monitoring tool for Punjab's agricultural landscape was successfully created. The program offers a fluid, data-driven visualisation of seasonal vegetation changes by combining GeoServer with OpenLayers. The finished result, which is displayed below, shows a scalable and useful WebGIS solution for environmental study.
+
+![44444](https://github.com/user-attachments/assets/e83c403e-9ee1-4aa2-8542-f1ffe935d321)
+
+**AI and Resource Disclosure**
+
+I employed technical resources and artificial intelligence to help with this project:
+
+1. Learning: I used YouTube tutorials to master the GeoServer Image Mosaic technique.
+2. Debugging: I employed artificial intelligence to resolve bugs in my JavaScript and CSS code.
+3. Documentation: I utilised AI to help structure this README and improve technical terminology.
+

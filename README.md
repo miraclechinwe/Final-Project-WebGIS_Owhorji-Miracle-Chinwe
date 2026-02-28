@@ -39,7 +39,7 @@ Also, i added a colour scheme,and save, as shown in the image below:
 
 Raster: A ramp of green to red that contrasts high and low vegetation.
 
-**Phase 3: Configuring the GeoServer Backend For My Vector Layer**
+**Phase 3: Configuring the GeoServer Backend For the Vector Layer**
 
 I downloaded the indian shapefile with administrative boundaries, and I separated the particular "Punjab" border from the broader dataset using the Select Layer By Attribute tool, and exported this selection as a brand-new, thin shapefile.
 
@@ -69,5 +69,5 @@ I also Wrote the Time Logic: I wrote the slider and play/pause buttons to update
 
 **In conclusion**
 An interactive monitoring tool for Punjab's agricultural landscape was successfully created. The program offers a fluid, data-driven visualisation of seasonal vegetation changes by combining GeoServer with OpenLayers. The finished result, which is displayed below, shows a scalable and useful WebGIS solution for environmental study.
-<img width="1023" height="524" alt="image" src="https://github.com/user-attachments/assets/ba165a32-0eaa-486b-9888-a375e15bc6cb" />
 
+![44444](https://github.com/user-attachments/assets/e8ce04dd-d99b-46a6-8788-5a3f485bbc27)

@@ -11,7 +11,7 @@ In order to preserve a polished process, I divided the project into three separa
 2. Punjab boundary shapefiles are stored in the data-vector.
 3. Web-frontend: Contains the source code for JavaScript, HTML, and CSS.
 
-**Phase 2: Configuring the GeoServer Backend**
+**Phase 2: Configuring the GeoServer Backend For My Raster Layer**
 
 First, I login into Geoserver and created a workspace with url, as shown in the image below
 
@@ -39,9 +39,17 @@ Also, i added a colour scheme,and save, as shown in the image below:
 
 Raster: A ramp of green to red that contrasts high and low vegetation.
 
-Vector: The Punjab state boundary is clearly defined by a broad red edge.
+**Phase 3: Configuring the GeoServer Backend For My Vector Layer**
 
-**Phase 3: Web Stack Frontend Development**
+I downloaded the indian shapefile with administrative boundaries, and I separated the particular "Punjab" border from the broader dataset using the Select Layer By Attribute tool, and exported this selection as a brand-new, thin shapefile.
+
+Next, I transferred the components of the shapefile (.shp,.shx,.dbf, and.prj) to the server's data-vector folder, and created a new GeoServer store called "Directory of Shapefiles", as shown in the image below
+<img width="1708" height="885" alt="image" src="https://github.com/user-attachments/assets/c9150885-d496-4ecc-bbbd-3fcd3fec1bbb" />
+
+To match the NDVI rasters, I published the layer using the appropriate coordinate reference system (CRS).
+Lastly, I made the visualisation using GeoServer CSS by producing a red outline and to allow people to view the NDVI satellite data beneath the state boundary, the fill opacity was set to zero.
+
+**Phase 4: Web Stack Frontend Development**
 
 Using Visual Studio Code, I created the user interface with an emphasis on clear code and interactive elements.
 
@@ -54,7 +62,12 @@ Using Visual Studio Code, I created the user interface with an emphasis on clear
 3. JavaScript-based OpenLayers: OSM and satellite base layers were used to initialise the map and the local endpoint was used to establish a connection to the GeoServer WMS.
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/9d59428c-85a1-4e88-9fba-ec93e0d9fd2b" />
 NOTE: I downloaded the 3rd party plugin of the Osm Layer to get the OL-Layerswitcher using the two link below:
-1. <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.2/dist/ol-layerswitcher.css" /> 
-2. <script src="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.2/dist/ol-layerswitcher.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.2/dist/ol-layerswitcher.css" /> 
+<script src="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.2/dist/ol-layerswitcher.js"></script>
 
 I also Wrote the Time Logic: I wrote the slider and play/pause buttons to update the TIME parameter in the WMS request string, causing GeoServer to quickly flip between photos.
+
+**In conclusion**
+An interactive monitoring tool for Punjab's agricultural landscape was successfully created. The program offers a fluid, data-driven visualisation of seasonal vegetation changes by combining GeoServer with OpenLayers. The finished result, which is displayed below, shows a scalable and useful WebGIS solution for environmental study.
+<img width="1023" height="524" alt="image" src="https://github.com/user-attachments/assets/ba165a32-0eaa-486b-9888-a375e15bc6cb" />
+
